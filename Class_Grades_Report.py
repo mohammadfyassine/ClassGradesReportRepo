@@ -12,3 +12,8 @@ for name, grade in records:
         class_journal[name] = []
     class_journal[name].append(grade)
 
+for student, grades in class_journal.items():
+    average = sum(grades) / len(grades)
+    print("Name:", student)
+    print("Grades:", grades)
+    print("Average:", round(average, 2), " \n")
