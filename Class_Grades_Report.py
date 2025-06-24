@@ -1,6 +1,7 @@
 records = [
-    ["Layla", 89], ["Tariq", 77], ["Layla", 91], ["Jana", 100], ["Tariq", 84],
-    ["Ziad", 62], ["Jana", 97], ["Tariq", 73], ["Ziad", 71], ["Layla", 86],
+    ["Layla", 89], ["Tariq", 77], ["Layla", 91], ["Jana", 100],
+    ["Tariq", 84],["Ziad", 62], ["Jana", 97], ["Tariq", 73],
+    ["Ziad", 71], ["Layla", 86],
     ["Jana", 94], ["Ziad", 75]
 ]
 
@@ -11,5 +12,8 @@ for name, grade in records:
         class_journal[name] = []
     class_journal[name].append(grade)
 
-print(class_journal)
-
+for student, grades in class_journal.items():
+    average = sum(grades) / len(grades)
+    print("Name:", student)
+    print("Grades:", grades)
+    print("Average:", round(average, 2), " \n")
